@@ -3,5 +3,5 @@
 
 @section('content')
 @include('layouts.header')
-
+@include('layouts.aboutme')
 @endsection
