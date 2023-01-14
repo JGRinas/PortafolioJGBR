@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+}
+
+/*
+Ordenar propiedades:
+Propiedad de posicionamiento
+Propiedad del box model
+Propiedad de texto
+Propiedades visuales (colores, bordes etc)
+otros
+*/
+
+/*header*/
+.header-content{
+    
+}
+
+/*fin header*/
