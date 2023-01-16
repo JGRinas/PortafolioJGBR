@@ -3,12 +3,16 @@
     --color-text-transparent: #f2f2f2cf;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Sofia+Sans&display=swap');
+
 * {
     box-sizing: border-box;
+    font-family: 'Sofia Sans', sans-serif;
 }
 
 body {
     padding: 0;
+    overflow-x: hidden;
 }
 
 /*
@@ -36,13 +40,15 @@ otros
 }
 
 .nav1-header {
-    position: absolute;
+    position: fixed;
     top: 0;
     display: flex;
     justify-content: space-between;
-
+   
     width: 100%;
     height: 50px;
+
+    background-color: #03000037;
 }
 
 .nav1-header h1 {
@@ -137,114 +143,121 @@ otros
 /*fin header*/
 /*Sobre mi*/
 
-/*
-
-.pre-galery-grid{
-    display: grid;
-    height: 550px;
-    grid-template-areas:
-    "img1 img1 img2 img3"
-    "img1 img1 img4 img5";
-    gap: 10px;
-}
-
-.galery-items{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.galery-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor:pointer;
-}
-
-.galery-items:nth-of-type(1){
-    grid-area: img1;
-}
-.galery-items:nth-of-type(2){
-    grid-area: img2;
-}
-.galery-items:nth-of-type(3){
-    grid-area: img3;
-}
-.galery-items:nth-of-type(4){
-    grid-area: img4;
-}
-.galery-items:nth-of-type(5){
-    grid-area: img5;
-}*/
 .aboutme {
-    display: grid;
+    display: flex;
+    flex-direction: row;
     height: auto;
-    grid-template-areas:
-        "txt1 txt1 txt2"
-        "txt1 txt1 txt3"
-        "txt1 txt1 txt4"
-        "txt1 txt1 txt5";
-    gap: 10px;
 
     padding: 10px;
-
-    background-color: #100f0f;
+    color: #f2f2f298;
+    background-color: #000000ef;
 }
 
-.aboutme-item{
-    background-color: #1d1c1c;
-}
 .aboutme-item:nth-of-type(1) {
-    grid-area: txt1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
+    margin: 20px;
 
-    width: 350px;
+    width: 80%;
     height: 100vh;
-
 
     border-radius: 10px;
 }
 
+.aboutme-img {
+    position: relative;
+}
+
+.aboutme h2{
+    letter-spacing: 4px;
+    font-size: 20px;
+}
+
 .aboutme-img img {
+    position: relative;
+    margin: 20px;
+
     width: 250px;
 
-    margin: 20px;
+    border-radius: 25px;
+}
+
+.aboutme-img span {
+    position: absolute;
+    top: 140px;
+    left: 0;
+
+    width: 295px;
+    height: 200px;
+
+    background-image: linear-gradient(
+        to left bottom,
+        #071003,
+        #0d0b00,
+        #0d0600,
+        #080201,
+        #000000
+    );
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 .aboutme-item:nth-of-type(2) {
-    grid-area: txt2;
-}
-.aboutme-item:nth-of-type(3) {
-    grid-area: txt3;
-}
-.aboutme-item:nth-of-type(4) {
-    grid-area: txt4;
-}
-.aboutme-item:nth-of-type(5) {
-    grid-area: txt5;
-}
+    padding: 30px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: left;
 
-.aboutme img {
-    height: 80%;
-    border-radius: 25px;
-}
-
-.aboutme .aboutme-text {
-    margin: 20%;
-
-    width: 50%;
-    height: 300px;
-
-    border-radius: 25px;
-    background-color: #f2f2f2;
     background-image: linear-gradient(
         to left bottom,
-        #3b0f57,
-        #291347,
-        #1c1235,
-        #130e22,
-        #06050d
+        #071003,
+        #0d0b00,
+        #0d0600,
+        #080201,
+        #000000
     );
+    border-radius: 20px;
+}
+
+.aboutme-item:nth-of-type(2) .datosP div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    padding: 5px;
+    padding-top: 15px;
+    border: 2px groove #ff000085;
+    border-radius: 10px;
+    
+}
+
+.aboutme-datosP span{
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.aboutme-datosP p{
+    display: flex;
+    align-items: center;    
+    font-size: 30px;
+}
+
+.aboutme-skills{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+
+    padding: 5px;
+    padding-top: 15px;
+
+
+}
+
+.aboutme-skills img{
+    width: 60px;
 }
 /*Fin Sobre mi*/
